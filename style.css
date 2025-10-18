@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eef3f9;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container{
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+h1, h2 {
+  text-align: center;
+  color: #4b0082; 
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input, select, button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #1e3a8a;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2746b3;
+}
+
+.pass-card {
+  background: #f1f5ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.pass-card strong {
+  color: #1e3a8a;
+}
+
+.pass-card button {
+  margin-right: 5px;
+  padding: 4px 8px;
+  font-size: 12px;
+}

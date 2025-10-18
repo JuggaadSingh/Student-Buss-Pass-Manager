@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buss Pass management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚌 Student Bus Pass Management Sysytem</h1>
+
+        <form id="passForm">
+            <input type="text" id="name" placeholder="Student Name" required>
+            <input type="text" id="studentId" placeholder="Student Id" required>
+            <input type="text" id="route" placeholder="Route" required>
+            <input type="text" id="distance" placeholder="Distance (km)" required>
+
+            <select id="duration">
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+            </select>
+
+            <button type="submit">Add Pass</button>
+        </form>
+        
+        <h2>All Passes</h2>
+        <div id="passList"></div>
+
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>

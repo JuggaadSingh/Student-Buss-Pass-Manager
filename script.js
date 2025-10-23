@@ -65,13 +65,21 @@ form.addEventListener("submit",function(e){
 });
 
 function renewPass(index) {
-    var pass = passes[index];
-    var expiry = new Date();
-    if(pass.duration == "monthly") expiry.setMonth(getMonth() + 1);
-    else expiry.setMonth(expiry.getMonth() + 12);
-    passes[index].expiry = expiry.toLocaleDateString();
-    localStorage("passes",JSON.stringify("passes"));
-    showpasses();
+  var pass = passes[index];
+  var expiry = new Date(pass.expiry);
+
+  if (pass.duration === "monthly") {
+    expiry.setMonth(expiry.getMonth() + 1);
+    pass.fee += Math.max(50, Math.round(pass.distance * 1.5));
+  } else {
+    expiry.setFullYear(expiry.getFullYear() + 1);
+    pass.fee += Math.max(50, Math.round(pass.distance * 1.5)) * 10;
+  }
+
+  pass.expiry = expiry.toLocaleDateString();
+  localStorage.setItem("passes", JSON.stringify(passes));
+  alert("✅ Pass renewed successfully!");
+  showpasses();
 }
 
 function deletePass(index) {
